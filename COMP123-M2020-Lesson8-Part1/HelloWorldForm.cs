@@ -26,5 +26,6 @@ namespace COMP123_M2020_Lesson8_Part1
         {
             WelcomeLabel.Text = (WelcomeLabel.Text == "Hello, World!") ? "Clicked!" : "Hello, World!";
         }
+
     }
 }

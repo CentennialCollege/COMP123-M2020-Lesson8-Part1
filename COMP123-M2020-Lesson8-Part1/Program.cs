@@ -6,17 +6,28 @@ using System.Windows.Forms;
 
 namespace COMP123_M2020_Lesson8_Part1
 {
-    static class Program
+    public static class Program
     {
+        // Step 1 - Declare a form
+        public static HelloWorldForm helloWorldForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HelloWorldForm());
+
+            // Step 2 - Instantiate a form
+            helloWorldForm = new HelloWorldForm();
+
+
+            // Step 3 - pass a reference to the Application
+            Application.Run(helloWorldForm);
         }
     }
 }
