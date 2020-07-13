@@ -16,5 +16,15 @@ namespace COMP123_M2020_Lesson8_Part1
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// This method changes the text property of the WelcomeLabel depending on its initial value
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickMeButton_Click(object sender, EventArgs e)
+        {
+            WelcomeLabel.Text = (WelcomeLabel.Text == "Hello, World!") ? "Clicked!" : "Hello, World!";
+        }
     }
 }
