@@ -103,6 +103,8 @@
 
         #endregion
 
+
+        // PRIVATE INSTANCE VARIABLES (FIELDS)
         private System.Windows.Forms.Label WelcomeLabel;
         private System.Windows.Forms.Button ClickMeButton;
         private System.Windows.Forms.TextBox NameTextBox;
