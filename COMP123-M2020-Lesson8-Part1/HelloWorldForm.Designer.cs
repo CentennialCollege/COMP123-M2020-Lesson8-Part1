@@ -67,6 +67,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(217, 38);
             this.NameTextBox.TabIndex = 1;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // NameLabel
             // 
@@ -96,6 +97,7 @@
             this.Name = "HelloWorldForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hello World!";
+            this.Load += new System.EventHandler(this.HelloWorldForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,28 @@ namespace COMP123_M2020_Lesson8_Part1
             WelcomeLabel.Text = (WelcomeLabel.Text == $"Hello, {NameTextBox.Text}!") ? "Clicked!" : $"Hello, {NameTextBox.Text}!";
         }
 
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Debug.WriteLine("NameTextBox Length is: " + NameTextBox.Text.Length);
+            var result = MessageBox.Show("NameTextBox Length is: " + NameTextBox.Text.Length, 
+                "NameTextBox Value", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Debug.WriteLine(result == DialogResult.OK ? "True" : "False"); 
+
+            ClickMeButton.Enabled = NameTextBox.Text.Length > 1;
+        }
+
+        /// <summary>
+        /// The Form Load event is triggered once, when the form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HelloWorldForm_Load(object sender, EventArgs e) 
+        {
+            ClickMeButton.Enabled = false;
+        }
+
+        
     }
 }
