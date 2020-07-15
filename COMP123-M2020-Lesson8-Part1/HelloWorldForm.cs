@@ -31,12 +31,6 @@ namespace COMP123_M2020_Lesson8_Part1
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine("NameTextBox Length is: " + NameTextBox.Text.Length);
-            var result = MessageBox.Show("NameTextBox Length is: " + NameTextBox.Text.Length, 
-                "NameTextBox Value", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            Debug.WriteLine(result == DialogResult.OK ? "True" : "False"); 
-
             ClickMeButton.Enabled = NameTextBox.Text.Length > 1;
         }
 
