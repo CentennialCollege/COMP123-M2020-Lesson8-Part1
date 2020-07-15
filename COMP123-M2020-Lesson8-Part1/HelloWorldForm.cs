@@ -18,6 +18,8 @@ namespace COMP123_M2020_Lesson8_Part1
             InitializeComponent();
         }
 
+        // UI EVENTS
+
         /// <summary>
         /// This method changes the text property of the WelcomeLabel depending on its initial value
         /// </summary>
@@ -34,6 +36,13 @@ namespace COMP123_M2020_Lesson8_Part1
             ClickMeButton.Enabled = NameTextBox.Text.Length > 1;
         }
 
+        private void GreetingCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            GreetingGroupBox.Visible = GreetingCheckBox.Checked;
+        }
+
+        // FORM EVENTS
+
         /// <summary>
         /// The Form Load event is triggered once, when the form loads
         /// </summary>
@@ -42,6 +51,7 @@ namespace COMP123_M2020_Lesson8_Part1
         private void HelloWorldForm_Load(object sender, EventArgs e) 
         {
             ClickMeButton.Enabled = false;
+            WelcomeLabel.Font = new Font("Consolas", 24.0f);
         }
 
         
